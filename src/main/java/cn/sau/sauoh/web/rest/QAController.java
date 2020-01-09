@@ -1,5 +1,6 @@
 package cn.sau.sauoh.web.rest;
 
+import cn.sau.sauoh.entity.Doctor;
 import cn.sau.sauoh.entity.QA;
 import cn.sau.sauoh.service.QAService;
 import cn.sau.sauoh.utils.Constant;
@@ -12,7 +13,9 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -38,6 +41,7 @@ public class QAController {
                 throw RRException.badRequest("sortOf allow ASC or DESC");
             }
         }
+        List<Object> lists = new ArrayList<>();
         Page<QA> page = new Page<>(pageNum, pageSize);
         if (Constant.SORTOF_ASC.equalsIgnoreCase(sortOf)) {
             page.addOrder(OrderItem.asc(sortBy));
@@ -45,7 +49,16 @@ public class QAController {
             page.addOrder(OrderItem.desc(sortBy));
         }
         qaService.page(page);
-        return R.ok().put("page", page);
+        List<Doctor> doctors = qaService.selectDoctor(page);
+        lists.add(page);
+        if(doctors != null){
+            lists.add(doctors);
+        }else{
+            List<Object> myNULL = new ArrayList<>();
+            myNULL.add("null");
+            lists.add(myNULL);
+        }
+        return R.ok().put("lists",lists);
     }
 
     /**

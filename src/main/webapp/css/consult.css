@@ -1,0 +1,141 @@
+@charset "utf-8";
+/* CSS Document */
+.main{
+    width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.record_info{
+    display: inline-block;
+    width: 600px;
+    height: 260px;
+    border: dashed 1px #fff;
+    border-bottom-color: #aaa;
+    margin: 10px;
+    padding: 15px 10px;
+     border-radius: 8px;
+}
+.medicine_advice{
+    border-radius: 8px;
+    height: 260px;
+    font-size: 14px;
+    border: solid 1px #ddd;
+    margin: 10px;
+    padding: 15px 10px;
+    width: 295px;
+    float: right;
+     overflow: hidden;
+     position: relative;
+}
+.medicine_title
+{
+    text-align: center;
+    display: block;
+    color: #09ad41;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
+    position: absolute;
+    top: 10px;
+    left: 123px;
+}
+.medicine_advice button{
+   background-color:#09ad41;
+    color:#fff;
+    width: 85px;
+    height: 29px;
+    border-radius: 51px;
+    position: absolute;
+    top: 10px;
+    left: 16px;
+   
+}
+.patient_description{
+    background-color: rgb(66,191,242);
+    color: #fff;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+.record_info textarea,.record_info p{
+    font-size: 14px;
+    color: #333;
+    text-indent: 2em;
+    word-break: break-all;
+    width: 600px;
+    margin: 15px 0;
+}
+textarea{
+    border-radius: 5px;
+    height: 60px; 
+}
+.doctor_advice{
+    background-color: #2ec561;
+    color: #fff;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+.write_info span{
+    color: #999;
+    display: inline-block;
+    width: 150px;
+    margin: 10px 0px;
+    margin-right: 20px;
+}
+
+.medicine_advice div{
+    color: #999;
+    margin: 10px;
+    font-size: 15px;
+}
+.number{
+    float: right;
+}
+.patient_name{
+    color: #999;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+.div_{
+    margin-bottom: 15px;
+}
+.button{
+    width: 100px;
+    height: 35px;
+    border-radius: 8px;
+    background-color:darkorange;
+    font-size: 16px;
+    color:#fff;
+    position: relative;
+    left: 240px;
+}
+select{
+    border:solid 1px #ccc;
+    width: 180px;
+    margin: 5px;
+}
+input{
+    border:solid 1px #ccc;
+    width: 50px;
+    margin: 5px;
+    margin-left: 20px;
+}
+hr{
+    border-color: #2ec561;
+}
+.medicine_advice .send_m{
+    background-color:#09ad41;
+    color:#fff;
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    left: 220px;
+}
+.div
+{
+    position: absolute;
+    top: 30px;
+    overflow: hidden;
+}

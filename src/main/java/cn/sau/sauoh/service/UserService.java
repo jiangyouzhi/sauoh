@@ -27,5 +27,7 @@ public interface UserService extends IService<User> {
     boolean updateBatchById(List<UserVM> vmList);
 
     Map<String, Object> getInfoByUsername(String username);
+
+    public List<User> selectAuth();
 }
 

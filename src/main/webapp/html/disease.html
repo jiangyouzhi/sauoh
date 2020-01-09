@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>按疾病查找</title>
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<link rel="stylesheet" type="text/css" href="../css/ui-component.css">
+    <link rel="stylesheet" type="text/css" href="../css/disease.css">
+    <script type="text/javascript" src="../js/disease.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="../js/ui.js"></script>
+</head>
+
+<body onload="init()">
+    <div id="top" class="top">
+		<div class="wrap">
+			<p class="call">010-114/116114电话预约</p>
+			<p class="welcome">欢迎来到在线问诊统一平台&nbsp;&nbsp;
+			<a href="#1">登录</a>
+			<a href="#2">注册</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#3">帮助中心</a>
+			</p>
+		</div>
+	</div>
+	<div id="header" class="header">
+		<div class="wrap">
+			<a href="main.html" class="logo"><img src="../img/logo_.png" alt="logo"/></a>
+			<div class="search ui-search">
+				<div class="ui-search-selected">医院</div>
+				<div class="ui-search-select-list" >
+					<a href="#">科室</a>
+					<a href="#">疾病</a>
+					<a href="#">医院</a>
+				</div>
+				<input type="text" name="" class="ui-search-input" placeholder="请输入搜索内容" />
+				<a href="#" class="ui-search-submit" onClick="Search(this)">&nbsp;</a>
+			</div>
+		</div>
+	</div>
+	<div id="nav" class="nav">
+		<div class="wrap">
+			<a href="main.html" class="link  ">首页</a>
+            <a href="departmet.html" class="link  ">按科室找医生</a>
+			<a href="hospitals.html" class="link ">按医院找医生</a>
+			<a href="disease.html" class="link menu">按疾病找医生</a>
+			<a href="health.html" class="link">科普养生</a>
+            <a href="medicine.html" class="link">药品购买</a>
+            <a href="record.html" class="link">问诊记录</a>
+			<a href="question.html" class="link  right">经典问答</a>
+		</div>
+	</div>
+    <div class="main">
+        <div class="department_nav">
+        <ul>
+            <li class="xuan" onclick="getKey(this)">十二指肠炎</li>
+            <li onclick="getKey(this)">胆石症</li>
+            <li onclick="getKey(this)">宫颈妊娠</li>
+            <li onclick="getKey(this)">慢性肝炎</li>
+            <li onclick="getKey(this)">肠道功能紊乱</li>
+            <li onclick="getKey(this)">痢疾</li>
+            <li onclick="getKey(this)">反流性食管炎</li>
+            <li onclick="getKey(this)">结肠炎</li>
+            <li onclick="getKey(this)">营养不良</li>
+            <li onclick="getKey(this)">坐骨神经损伤</li>
+            <li onclick="getKey(this)">农药中毒</li>
+            <li onclick="getKey(this)">儿童癫痫</li>
+            <li onclick="getKey(this)">麻风病</li>
+            <li onclick="getKey(this)">高血压脑病</li>
+            <li onclick="getKey(this)">帕金森综合征</li>
+            <li onclick="getKey(this)">煤气中毒</li>
+            <li onclick="getKey(this)">弱智</li>
+            <li onclick="getKey(this)">重症肌无力</li>
+            <li onclick="getKey(this)">慢性心衰</li>
+            <li onclick="getKey(this)">小儿感冒</li>
+            <li onclick="getKey(this)">手足口病</li>
+            <li onclick="getKey(this)">百日咳</li>
+            <li onclick="getKey(this)">遗尿症</li>
+            <li onclick="getKey(this)">子宫炎</li>
+            <li id="diy">自描述症状</li>
+        </ul>
+        </div>
+        <hr  class="fen"/>
+        <div id="info" class="info">
+        </div>
+    </div> 
+    <div id="footer" class="footer">
+		<div class="wrap">
+			Copyright&nbsp;&copy;&nbsp;在线问诊	
+		</div>
+	</div>
+</body>
+</html>

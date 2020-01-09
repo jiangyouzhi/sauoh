@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>管理</title>
+	<link rel="stylesheet" type="text/css" href="../css/patient_info.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<link rel="stylesheet" type="text/css" href="../css/ui-component.css">
+    <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="../js/ui.js"></script>
+	<script type="text/javascript" src="../js/admin.js"></script>
+</head>
+<body onload="getCookie()">
+	<!-- 头部 -->
+	<header class="header">
+		<div id="header" class="header">
+		<div class="wrap">
+			<a href="main.html" class="logo"><img src="../img/logo_.png" alt="logo"/></a>
+            <span class="logo_word">在线问诊管理员平台</span>
+            <div class="ad_msg">
+			    <div class="word">
+				    <span id="Uname">象信息</span><br/>
+			        <span id="Ushenfen">XXXX</span>
+			    </div>
+			    <img src="../img/head.png" alt="头像" class="head">
+			    <span class="exit" onclick="exit()">退&emsp;出</span>
+		    </div>
+		</div>
+	</div>
+	</header>
+    <div id="nav" class="nav">
+        <div class="wrap">
+			 <a href="#" class="link  menu">患者信息</a>
+            <a href="#" class="link  ">医生信息</a>
+			 <a href="#" class="link ">药品信息</a>
+			 <a href="#" class="link ">管理员信息</a>
+         </div>
+    </div>
+
+	<!-- 主体 -->
+	 <div class="main">
+        <div class="admin_nav">
+            <ul>
+                <li class="xuan" onclick="getKey(this)">查看患者信息</li>
+                <li onclick="getKey(this)">添加患者信息</li>
+                <li onclick="getKey(this)">修改患者信息</li>
+                <li onclick="getKey(this)">删除患者信息</li>
+            </ul>
+        </div>
+        <hr  class="fen"/>
+        <div id="info" class="info">
+        </div>
+    </div>
+<!--
+        <div class="nav" >
+					<ul>
+						<li class="add">
+							<span id="patient_find" onclick="find(this,1,0)">查看患者信息</span>
+						</li>
+						<li>
+							<span onclick="add(this,1)">添加患者信息</span>
+						</li>
+						<li>
+							<span onclick="amend(this,1)">修改患者信息</span>
+						</li>
+						<li>
+							<span onclick="delet(this,1)">删除患者信息</span>
+						</li>
+					</ul>
+        </div>
+-->
+<!--
+		<div class="left">
+			<ul class="op_fun">
+				<li id="li1" class="selected" onclick="patient(this)" >
+					&emsp;<img src="../img/huan.png" alt="患者" class="tubiao">
+					<span >&emsp;患者信息</span>
+				</li>
+				<li id="li2" onclick="doctor(this)">
+					&emsp;<img src="../img/yi.png" alt="医生" class="tubiao">
+					<span >&emsp;医生信息</span>
+				</li>
+				<li id="li3" onclick="medicine(this)">
+					&emsp;<img src="../img/yao.png" alt="药品" class="tubiao">
+					<span >&emsp;药品信息</span>
+				</li>
+				<li id="li4" onclick="admin(this)">
+					&emsp;<img src="../img/guan.png" alt="管理员" class="tubiao">
+					<span >&emsp;管理员信息</span>
+				</li>
+			</ul>
+		</div>
+-->
+<!--
+		<div class="right">
+			<div id="patient" class="patient">
+				<div class="nav" >
+					<ul>
+						<li class="add">
+							<span id="patient_find" onclick="find(this,1,0)">查看患者信息</span>
+						</li>
+						<li>
+							<span onclick="add(this,1)">添加患者信息</span>
+						</li>
+						<li>
+							<span onclick="amend(this,1)">修改患者信息</span>
+						</li>
+						<li>
+							<span onclick="delet(this,1)">删除患者信息</span>
+						</li>
+					</ul>
+				</div>
+				<div class="hr"></div>
+				<div class="content"></div>
+			</div>
+-->
+			
+<!--
+			<div id="doctor" class="doctor">
+				<div class="nav" >
+					<ul class="doctor_ul">
+						<li class="add">
+							<span id="doctor_find" onclick="find(this,2,0)">查看医生信息</span>
+						</li>
+						<li>
+							<span onclick="add(this,2)">添加医生信息</span>
+						</li>
+						<li>
+							<span onclick="amend(this,2)">修改医生信息</span>
+						</li>
+						<li>
+							<span onclick="delet(this,2)">删除医生信息</span>
+						</li>
+						<li>
+							<span id="doctor_shen" onclick="audit(this,2)">医生资格审核</span>
+						</li>
+					</ul>
+				</div>
+				<div class="hr"></div>
+				<div class="content"></div>
+			</div>
+			
+			<div id="medicine" class="medicine">
+				<div class="nav">
+					<ul>
+						<li class="add">
+							<span id="medicine_find" onclick="find(this,3,0)">查看药品信息</span>
+						</li>
+						<li>
+							<span onclick="add(this,3)">添加药品信息</span>
+						</li>
+						<li>
+							<span onclick="amend(this,3)">修改药品信息</span>
+						</li>
+						<li>
+							<span onclick="delet(this,3)">删除药品信息</span>
+						</li>
+					</ul>
+				</div>
+				<div class="hr"></div>
+				<div class="content"></div>
+			</div>
+			
+			<div id="admin" class="admin">
+				<div class="nav">
+					<ul>
+						<li class="add">
+							<span id="admin_find" onclick="find(this,4,0)">查看管理员信息</span>
+						</li>
+						<li>
+							<span onclick="add(this,4)">添加管理员信息</span>
+						</li>
+						<li>
+							<span onclick="amend(this,4)">修改管理员信息</span>
+						</li>
+						<li>
+							<span onclick="delet(this,4)">删除管理员信息</span>
+						</li>
+					</ul>
+				</div>
+				<div class="hr"></div>
+				<div class="content"></div>
+			</div>
+-->
+		
+	<div id="footer" class="footer">
+		<div class="wrap">
+			Copyright&nbsp;&copy;&nbsp;在线问诊	
+		</div>
+	</div>
+</body>
+</html>

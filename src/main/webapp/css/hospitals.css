@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* CSS Document */
+.main{
+    width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.department_nav ul{
+    list-style: none;
+    text-align: center;
+    color: #333;
+}
+.department_nav ul li{
+     float: left;
+    color: #2ec561;
+     width: 100px;
+     margin: 3px 30px;
+     padding: 5px 5px;
+    cursor: pointer;
+}
+.department_nav ul li:hover{
+    opacity: 0.7;
+}
+.xuan{
+    background-color: #09ad41;
+    color: #fff!important;
+}
+.fen{
+    position: relative;
+    top: 5px;
+    border-color: #2ec561;
+    clear: both;
+}
+.doctor{
+    width: 415px;
+    display: inline-block;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    padding: 10px 30px;
+    margin: 10px;
+    font-size: 14px;
+}
+.doctor-name{
+    padding-bottom: 5px;
+    font-size: 20px;
+    line-height: 25px;
+    color: #2ec561;
+    float: left;
+    cursor: pointer;
+}
+.doctor-name:hover{
+    opacity: 0.7;
+}
+.doctor-level{
+    color: #666;
+    float: right;
+    margin-right: -10px;
+    padding-top: 5px;
+    line-height: 16px;
+}
+.doctor-phone{
+    clear: both;
+    padding: 5px 0;
+    color: #999;
+}
+.doctor-hosptal{
+    float: right;
+}
+.doctor-people{
+    color: #333;
+}
+.doctor-good{
+    float: right;
+}
+.doctor hr{
+    border-color: #ccc;
+    border-style: dashed;
+    border-bottom: none;
+}
+.doctor-skill span{
+    display: inline-block;
+    float: left;
+    color: rgba(66,191,242,0.7);
+}
+.doctor-skill{
+    color: #999;
+}

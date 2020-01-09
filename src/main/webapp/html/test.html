@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript">
+		function fun(){
+			var xmlhttp;
+			if (window.XMLHttpRequest)
+			{
+				//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+				xmlhttp=new XMLHttpRequest();
+			}
+			else
+			{
+				// IE6, IE5 浏览器执行代码
+				xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			//注册接口
+			// console.log(JSON.stringify(user));
+			var user = new Object();
+			user.name="haha";
+			user.sex="女";
+			user.birthday="2019-12-14";
+			user.phone="1234567811"
+			var str="localhost:8080/api/patient/info/"+1;
+			xmlhttp.open("POST","localhost:8080/api/patient/info",true);
+			xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+			xmlhttp.send(1);
+			xmlhttp.onreadystatechange = result;
+			function result()
+			{
+				if(xmlhttp.readyState == 4)
+				{
+					if (xmlhttp.status == 200)
+					{
+						i = xmlhttp.responseText;
+						console.log(i);
+					}
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<button onclick="fun()">点击</button>
+</body>
+</html>

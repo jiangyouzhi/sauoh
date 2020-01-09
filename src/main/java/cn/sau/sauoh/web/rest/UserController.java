@@ -166,4 +166,10 @@ public class UserController {
         }
         throw RRException.serverError();
     }
+
+    @GetMapping("/authList")
+    public R authList() {
+        List<User> users = userService.selectAuth();
+        return R.ok().put("users",users);
+    }
 }

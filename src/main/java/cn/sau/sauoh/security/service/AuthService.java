@@ -1,13 +1,18 @@
 package cn.sau.sauoh.security.service;
 
 import cn.sau.sauoh.config.MailConfig;
+import cn.sau.sauoh.entity.Doctor;
+import cn.sau.sauoh.entity.Patient;
 import cn.sau.sauoh.entity.User;
 import cn.sau.sauoh.entity.UserRole;
+import cn.sau.sauoh.repository.DoctorMapper;
+import cn.sau.sauoh.repository.PatientMapper;
 import cn.sau.sauoh.repository.UserMapper;
 import cn.sau.sauoh.repository.UserRoleMapper;
 import cn.sau.sauoh.security.entity.RegisterUser;
 import cn.sau.sauoh.utils.Constant;
 import cn.sau.sauoh.utils.EmailUtils;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
@@ -19,6 +24,7 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.time.Duration;
 import java.time.Instant;
+import java.util.List;
 
 /**
  * @author nullptr
@@ -34,6 +40,13 @@ public class AuthService {
     private UserMapper userMapper;
     private UserRoleMapper userRoleMapper;
     private EmailUtils emailUtils;
+
+    @Autowired
+    private DoctorMapper doctorMapper;
+
+    @Autowired
+    private PatientMapper patientMapper;
+
 
 
     @Autowired
@@ -148,5 +161,14 @@ public class AuthService {
         return true;
     }
 
+    public Doctor selectDoctor(String userName){
+        int id = userMapper.selectByUsername(userName).getId();
+        return doctorMapper.selectByUserId(id);
+    }
+
+    public Patient selectPatient(String userName){
+        int id = userMapper.selectByUsername(userName).getId();
+        return patientMapper.selectByUserId(id);
+    }
 }
 
