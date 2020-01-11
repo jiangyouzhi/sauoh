@@ -1,10 +1,14 @@
 package cn.sau.sauoh.web.rest;
 
+import cn.sau.sauoh.entity.Doctor;
 import cn.sau.sauoh.entity.MedicalRecord;
+import cn.sau.sauoh.entity.MedicineOrder;
+import cn.sau.sauoh.entity.Patient;
 import cn.sau.sauoh.service.MedicalRecordService;
 import cn.sau.sauoh.utils.Constant;
 import cn.sau.sauoh.utils.R;
 import cn.sau.sauoh.utils.RRException;
+import cn.sau.sauoh.web.vm.MedicineOrderVM;
 import com.baomidou.mybatisplus.core.metadata.OrderItem;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -38,6 +43,7 @@ public class MedicalRecordController {
                 throw RRException.badRequest("sortOf allow ASC or DESC");
             }
         }
+        List<Object> lists = new ArrayList<>();
         Page<MedicalRecord> page = new Page<>(pageNum, pageSize);
         if (Constant.SORTOF_ASC.equalsIgnoreCase(sortOf)) {
             page.addOrder(OrderItem.asc(sortBy));
@@ -45,7 +51,14 @@ public class MedicalRecordController {
             page.addOrder(OrderItem.desc(sortBy));
         }
         medicalRecordService.page(page);
-        return R.ok().put("page", page);
+        List<Doctor> doctors = medicalRecordService.selectDoctor(page);
+        List<Patient> patients = medicalRecordService.selectPatient(page);
+        List<MedicineOrder> medicineOrders = medicalRecordService.selectMedicineOrder(page);
+        lists.add(page);
+        lists.add(doctors);
+        lists.add(patients);
+        lists.add(medicineOrders);
+        return R.ok().put("lists",lists);
     }
 
 
@@ -95,11 +108,12 @@ public class MedicalRecordController {
      * 修改
      */
     @PutMapping("/update")
-    public R update(@Valid @RequestBody MedicalRecord medicalRecord) {
+    public R update(@Valid @RequestBody MedicalRecord medicalRecord,@Valid @RequestBody List<MedicineOrderVM> vmList) {
         if (medicalRecord.getId() == null) {
             throw RRException.badRequest(Constant.ERROR_MSG_ID_NEED);
         }
         if (medicalRecordService.updateById(medicalRecord)) {
+
             return R.ok().put("medicalRecord", medicalRecord);
         }
         throw RRException.serverError();

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>完善患者信息</title>
+	<link rel="stylesheet" type="text/css" href="../css/wanshan.css">
+        <script type="text/javascript" src="../js/wanshan.js"></script>
+</head>
+<body onload="getCookie()">
+	<div id="info" class="info">
+        	<div class="title">患者基本信息</div>
+        	<div>
+        		<span class="name">姓  名：</span>
+        		<input type="text" onfocus="clear_info1(this)" onblur="empty(this)"><br>
+        		<span class="name">性  别：</span>
+        		<select class="select">
+        			<option value="male">男</option>
+        			<option value="female">女</option>
+        		</select><br>
+        		<span class="name">出生日期：</span>
+        		<input type="date" onfocus="clear_info1(this)" onblur="empty(this)"><br>
+        		<span class="name">手机号码：</span>
+        		<input type="text" onfocus="clear_info1(this)" onblur="empty(this)" onchange="phone(this)"><br>
+        		<button class="button" onclick="add_patient(this)">保 存</button>
+        	</div>
+        </div>
+</body>
+</html>

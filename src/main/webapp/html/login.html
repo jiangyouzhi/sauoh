@@ -1,0 +1,55 @@
+<!DOCTYPE html/>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>主页</title>
+    <link rel="stylesheet" type="text/css" href="../css/login.css"/>
+    <script type="text/javascript" src="../js/login.js"></script>
+</head>
+<body class="bg">
+    <div class="main">
+        <!-- 登录 -->
+        <div class="center" id="show1">
+            <span class="word">用户名称：</span>
+            <input type="text" class="uname" placeholder="&emsp;请输入用户名" 
+                id="uname" onchange="isEmpty(this,0)" onblur="isEmpty(this,0)" />
+            <div class="tip" id="tip_name"></div>
+            <span class="word">密&emsp;&emsp;码：</span>
+            <input type="password" class="upass" placeholder="&emsp;请输入密码" 
+                id="upass" onblur="isEmpty(this,1)"/>
+            <div class="tip" id="tip_pass"></div>
+            <span class="word">登录身份：</span>
+            <div class="sf">
+                    <input  type="radio" name="sf" value="ROLE_PATIENT"><span>患者</span>&emsp;
+                    <input  type="radio" name="sf" value="ROLE_DOCTOR"><span>医生</span>&emsp;
+                    <input  type="radio" name="sf" value=""><span>管理员</span>
+            </div>
+            <input type="button" class="login_button" value="登&emsp;录" onclick="sign_in()" />
+            <br/><br/>
+            <button class="sign_button" onclick="sign_up()">注册</button>
+        </div>
+        <!-- 注册 -->
+        <div class="center2" id="show2">
+            <span class="word">用户名称：</span>
+            <input type="text" placeholder="&emsp;请输入用户名" class="uname" 
+                id="sign_uname" onchange="isEmpty(this,4)" onblur="isEmpty(this,4)" />
+            <div class="tip" id="tip_name_sign"></div>
+            <span class="word">邮&emsp;&emsp;箱：</span>
+            <input type="text" placeholder="&emsp;请输入电子邮箱地址" class="uname" 
+                id="sign_uemail" onchange="isEmail(this,)" onblur="isEmpty(this,2)" />
+            <div class="tip" id="tip_email_sign"></div>
+            <span class="word">密&emsp;&emsp;码：</span>
+            <input type="password" placeholder="&emsp;请输入密码" class="upass" 
+                id="upass1" onblur="isEmpty(this,3)"/>
+            <div class="tip" id="tip_pass1"></div>            
+            <span class="word">确认密码：</span>
+            <input type="password" placeholder="&emsp;请再输入密码" class="upass" 
+                id="upass2" onchange="isEqual()"/>
+            <div class="tip" id="tip_pass2"></div>
+            <input type="button" class="login_button" value="注&emsp;册" 
+                onclick="sign_submit()" />
+            <br/><br/>
+        </div>
+    </div>
+</body>
+</html>

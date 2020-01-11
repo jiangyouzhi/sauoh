@@ -19,5 +19,9 @@ public interface DoctorService extends IService<Doctor> {
     boolean saveVmBatch(List<DoctorVM> vmList);
 
     DoctorRecordVM getVmById(Integer id);
+    //todo 该怎么实现
+    boolean isOnline(Integer doctorId);
+    //todo 发邮件
+    boolean alertMessage(Integer doctorId);
 }
 

@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* CSS Document */
+.main{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.problem_header{
+    position: relative;
+    left: 55px;
+    margin-bottom: 10px;
+}
+.problem_header span{
+    position: relative;
+    top: -60px;
+    font-size: 20px;
+    color: #2ec561;
+}
+.problem_header textarea{
+    width: 763px;
+    height: 92px;
+    border: solid 1px #ccc;
+    border-radius: 8px;
+}
+.problem_header button{
+    background-color:#2ec561;
+    color:#fff;
+    width: 93px;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 7px;
+    position: relative;
+    top: -14px;
+    left: -895px;
+}
+hr{
+    border-bottom: none;
+    border-top: dashed 1px #eee;
+}
+.problem_main{
+    margin:50px 5px;
+    font-size: 14px;
+}
+.problem{
+    margin: 9px;
+}
+.wen{
+    background-color: rgba(0,166,3,1.00);
+    padding: 2px 5px;
+    color: #fff;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-right: 10px;
+    float: left;
+}
+.problem_info{
+    color: #333;
+    width: 800px;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 22px;
+}
+.time{
+    color: #bbb;
+    font-size: 14px;
+    float: right;
+}
+.da{
+    background-color: rgba(66,191,242,1.00);
+    padding: 2px 5px;
+    color: #fff;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-right: 10px;
+    float: left;
+    display: inline-block;
+    
+}
+.answer{
+    font-size: 14px;
+    margin: 9px;
+}
+.answer_info{
+   color: #777;
+   width: 700px;
+   display: inline-block;
+    line-height: 22px;
+}
+.witer{
+    display: block;
+    margin-left: 35px;
+    margin-top: 10px;
+    color:rgba(66,191,242,0.9);
+}
+.answer textarea{
+    width: 941px;
+    height: 66px;
+}
+.answer button{
+    width: 50px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: rgba(255,169,47,1.00);
+    color: #fff;
+}
+.save{
+    width: 100px !important;
+    display: block;
+    margin: 6px auto;
+}

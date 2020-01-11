@@ -1,5 +1,7 @@
 package cn.sau.sauoh.security.controller;
 
+import cn.sau.sauoh.entity.Doctor;
+import cn.sau.sauoh.entity.Patient;
 import cn.sau.sauoh.entity.User;
 import cn.sau.sauoh.security.entity.RegisterUser;
 import cn.sau.sauoh.security.service.AuthService;
@@ -10,6 +12,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 登陆相关的controller
@@ -55,5 +59,15 @@ public class AuthController {
             return R.ok().put("msg", "邮箱验证成功");
         }
         return R.ok().put("msg", "验证失败，请重新注册");
+    }
+
+    @GetMapping("/required/{userName}")
+    public R requiredMessage(@PathVariable("userName") String userName){
+        List<Object> list = new ArrayList<>();
+        Doctor doctor = authService.selectDoctor(userName);
+        Patient patient = authService.selectPatient(userName);
+        list.add(doctor);
+        list.add(patient);
+        return R.ok().put("list",list);
     }
 }

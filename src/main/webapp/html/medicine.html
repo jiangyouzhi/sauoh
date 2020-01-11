@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>药品购买</title>
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<link rel="stylesheet" type="text/css" href="../css/ui-component.css">
+    <link rel="stylesheet" type="text/css" href="../css/medicine.css">
+    <script type="text/javascript" src="../js/medicine.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="../js/ui.js"></script>
+</head>
+
+<body onLoad="init()">
+    <div id="top" class="top">
+		<div class="wrap">
+			<p class="call">010-114/116114电话预约</p>
+			<p class="welcome">欢迎来到在线问诊统一平台&nbsp;&nbsp;
+			<a href="#1">登录</a>
+			<a href="#2">注册</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#3">帮助中心</a>
+			</p>
+		</div>
+	</div>
+	<div id="header" class="header">
+		<div class="wrap">
+			<a href="main.html" class="logo"><img src="../img/logo_.png" alt="logo"/></a>
+			<div class="search ui-search">
+				<div class="ui-search-selected">医院</div>
+				<div class="ui-search-select-list" >
+					<a href="#">科室</a>
+					<a href="#">疾病</a>
+					<a href="#">医院</a>
+				</div>
+				<input type="text" name="" class="ui-search-input" placeholder="请输入搜索内容" />
+				<a href="#" class="ui-search-submit" onClick="Search(this)">&nbsp;</a>
+			</div>
+		</div>
+	</div>
+	<div id="nav" class="nav">
+		<div class="wrap">
+			<a href="main.html" class="link  ">首页</a>
+            <a href="departmet.html" class="link  ">按科室找医生</a>
+			<a href="hospitals.html" class="link ">按医院找医生</a>
+			<a href="disease.html" class="link ">按疾病找医生</a>
+			<a href="health.html" class="link ">科普养生</a>
+            <a href="medicine.html" class="link menu ">药品购买</a>
+            <a href="record.html" class="link ">问诊记录</a>
+			<a href="question.html" class="link  right">经典问答</a>
+		</div>
+	</div>
+    <div class="main">
+        <div class="department_nav">
+        <ul>
+            <li class="xuan" onclick="getKey(this)">胃肠用药</li>
+            <li onclick="getKey(this)">呼吸系统</li>
+            <li onclick="getKey(this)">心脑血管</li>
+            <li onclick="getKey(this)">风湿骨科</li>
+            <li onclick="getKey(this)">皮肤科药</li>
+            <li onclick="getKey(this)">五官科药</li>
+            <li onclick="getKey(this)">妇科用药</li>
+            <li onclick="getKey(this)">肝胆用药</li>
+            <li onclick="getKey(this)">儿科用药</li>
+            <li>抗肿瘤药</li>
+            <li>男科用药</li>
+            <li>神经系统</li>
+            <li>营养滋补</li>
+            <li>民族用药</li>
+        </ul>
+        </div>
+        <hr  class="fen"/>
+        <div id="info" class="info">
+        </div>
+    </div> 
+    <div class="shopCar" >
+        <img src="../img/shopCar.png" alt="购物车" onmousemove="listing()" onmouseleave="clearCar()">
+        <span id="carNum">00</span>
+    </div>
+    <div class="listing" id="list" onmousemove="listing()" onmouseleave="clearCar()">
+       
+    </div>
+    <div id="footer" class="footer">
+		<div class="wrap">
+			Copyright&nbsp;&copy;&nbsp;在线问诊	
+		</div>
+	</div>
+</body>
+</html>

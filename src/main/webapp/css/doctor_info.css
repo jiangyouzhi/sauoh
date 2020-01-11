@@ -1,0 +1,36 @@
+.table_size{
+	font-size: 16px;
+}
+.button_shen
+{
+	width: 80px;
+	height: 25px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	border: none;
+	color: #fff;
+	border-radius: 5px;
+	font-size: 15px;
+	cursor: pointer;
+}
+.yes
+{
+	background-color: rgba(0,255,0,0.5);  
+}
+.no
+{
+   background-color: rgba(255,0,0,0.8);	
+}
+.button_add{
+	cursor: pointer;
+	width: 300px;
+	height: 45px;
+	border-radius: 8px;
+	background-color: #2ec561;
+	font-size: 25px;
+	font-weight: bold;
+	color: #fff;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}

@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+.hr{
+    width: 1000px;
+    border-color: #2ec561;
+}
+
+.health_nav{
+    width: 1000px;
+    margin: 0 auto;
+}
+.health_nav span{
+    color: #2ec561;
+    margin-right: 100px;
+    line-height: 30px;
+    cursor: pointer;
+}
+.health_nav span:hover{
+    opacity: 0.7;
+}
+.xuan{
+    padding: 5px 10px;
+    background-color: #09ad41;
+    color: #fff !important;
+}
+.health_nav hr{
+    margin-top: 10px;
+    border: solid 1px #eee;
+}
+.main{
+    width: 1000px;
+    margin: 0 auto;
+}
+.info{
+    list-style: none;
+}
+.info h3{
+    color: #2ec561;
+}
+.info h5{
+    color: #09ad41;
+}
+.info li{
+    border-bottom: solid 1px #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.info li p{
+    color: #666;
+    line-height: 25px;
+    font-size: 14px;
+}

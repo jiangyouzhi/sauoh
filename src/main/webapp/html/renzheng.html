@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>医生认证</title>
+	<link rel="stylesheet" type="text/css" href="../css/doctor_info.css">
+	<link rel="stylesheet" type="text/css" href="../css/renzheng.css">
+	<script type="text/javascript" src="../js/renzheng.js"></script>
+</head>
+<body onload="getCookie()">
+	<div class="main">
+		<div id="info" class="info">
+	        <div>
+	        	<div class="title">医生认证信息</div>
+	        	<div>
+	        		<span class="name">姓  名：</span>
+	        		<input type="text" onfocus="clear_info1(this)" onblur="empty(this)"><br/>
+	        		<span class="name">性  别：</span>
+	        		<select class="select">
+	        			<option value="male">男</option>
+	        			<option value="female">女</option>
+	        		</select><br>
+	        		<span class="name">从医时间：</span>
+	        		<input type="date" onfocus="clear_info1(this)" onblur="empty(this)"><br/>
+	        		<span class="name">医生资格：</span>
+	        		<select class="select">
+	        			<option value="医生">医生</option>
+	        			<option value="副主任医生">副主任医生</option>
+	        			<option value="主任医生">主任医生</option>
+	        		</select><br>
+	        		<span class="name">手机号码：</span>
+	        		<input type="text" onfocus="clear_info1(this)" onblur="empty(this)" onchange="phone(this)"><br/>
+	        		<span class="name">所属医院：</span>
+	        		<input type="text" onfocus="clear_info1(this)" onblur="empty(this)"><br/>
+	        		<span class="name">所属科室：</span>
+	        		<select class="select">
+	        			<option value="1">妇科</option>
+	        			<option value="2">儿科</option>
+	        			<option value="3">内科</option>
+	        			<option value="4">皮肤性病科</option>
+	        			<option value="5">营养科</option>
+	        			<option value="6">骨伤科</option>
+	        			<option value="7">男科</option>
+	        			<option value="8">外科</option>
+	        			<option value="9">肿瘤及防治科</option>
+	        			<option value="10">中医科</option>
+	        			<option value="11">口腔颌面科</option>
+	        			<option value="12">眼科</option>
+	        			<option value="13">整形美容科</option>
+	        			<option value="14">精神心理科</option>
+	        			<option value="15">产科</option>
+	        		</select><br>
+	        		<button class="button_add" onclick="add_doctor(this)">添  加</button>
+	        	</div>
+	        </div>
+	    </div>
+	</div>
+</body>
+</html>

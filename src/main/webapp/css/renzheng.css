@@ -1,0 +1,141 @@
+.postion{
+	position: absolute;;
+	left: 0;
+}
+.main{
+    width: 500px;
+    margin-bottom: 10px;
+}
+.title{
+	font-size: 25px;
+    color:#2ec561;
+    margin: 20px 0;
+    text-align: center;
+    font-weight: bold;
+}
+.input_info
+{
+	font-size: 25px;
+	line-height: 40px;
+	width: 200px;
+	display: inline-block;
+	text-align: left;
+	color: rgb(96,180,255);
+}
+.info{
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+	color: #666;
+	font-size: 16px;
+}
+.info input{
+	width: 269.33px;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-right: 30px;
+    height: 25px;
+    border-radius: 3px;
+}
+.name
+{
+   font-size: 25px;
+   line-height: 40px;
+    width: 130px;
+    display: inline-block;
+    text-align: left;
+    color:#2ec561;
+}
+.select{
+	width: 272px;
+	font-size: 25px;
+	margin-top: 10px;
+	margin-right: 30px;
+	height: 35px;
+	border-radius: 2px;
+}
+.button{
+	margin-right: 150px;
+    margin-left: 167px;
+    width: 121.33px;
+    margin-top: 0px;
+    cursor: pointer;
+    height: 35px;
+    border-radius: 13px;
+    background-color:#2ec561;
+    font-size: 20px;
+    font-weight: bold;
+    color:#fff;
+}
+.up_page{
+	background-color: rgba(46,197,97,0.8);
+	color: #fff;
+	width: 70px;
+	height: 35px;
+	border-radius: 10px;
+}
+.down_page{
+	background-color: rgba(46,197,97,0.8);
+	color: #fff;
+	width: 70px;
+	height: 35px;
+	border-radius: 8px;
+}
+.page_zhong{
+	background-color: rgba(46,197,97,0.8) !important;
+	color: #fff;
+}
+.page{
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: #fff;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+}
+.page_button
+{
+	margin-top: 20px;
+}
+.sure_xiu{
+	color:#fff;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    top: 20px;
+    width: 250px;
+    height: 45px;
+    background-color:#2ec561;
+}
+.delet_button{
+	color: #fff;
+	font-size: 25px;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 5px;
+	position: relative;
+	top: 20px;
+	width: 250px;
+	height: 45px;
+	background-color: #2ec561;
+}
+.in{
+	position: absolute;
+    top: 215px;
+    left: 814px;
+}
+.sure{
+	width: 50px;
+    background-color:#2ec561;
+    height: 30px;
+    color:#fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 223px;
+    left: 1110px;
+}
+.show{
+	background-color: rgba(46,197,97,0.6) !important;
+}

@@ -1,0 +1,166 @@
+@charset "utf-8";
+/* CSS Document */
+.main{
+    width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.record_header ul{
+    list-style: none;
+    text-align: center;
+    color: #333;
+}
+.record_header ul li{
+     float: left;
+    color: #2ec561;
+     width: 100px;
+     margin: 3px 30px;
+     padding: 5px 5px;
+    cursor: pointer;
+    
+}
+.record_header ul li:hover{
+    opacity: 0.8;
+}
+.xuan{
+    background-color: #09ad41;
+    color: #fff!important;
+}
+.fen{
+    position: relative;
+    top: 8px;
+    border-color: #2ec561;
+    clear: both;
+}
+.record_info{
+    display: inline-block;
+    width: 600px;
+    height: 260px;
+    border: dashed 1px #fff;
+    border-bottom-color: #aaa;
+    margin: 10px;
+    padding: 15px 10px;
+     border-radius: 8px;
+}
+.medicine_advice{
+    border-radius: 8px;
+    height: 260px;
+    font-size: 14px;
+    border: solid 1px #ddd;
+    margin: 10px;
+    padding: 15px 10px;
+    width: 295px;
+    float: right;
+}
+.medicine_title
+{
+    text-align: center;
+    display: block;
+    color: #09ad41;
+    font-weight: bold;
+    font-size: 18px;
+}
+.medicine_advice button{
+    background-color: #09ad41;
+    color: #fff;
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+    position: relative;
+    top: -25px;
+    left: 225px;
+}
+.patient_description{
+    background-color: rgb(66,191,242);
+    color: #fff;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+.record_info p{
+    font-size: 14px;
+    color: #333;
+    text-indent: 2em;
+    word-break: break-all;
+    width: 600px;
+    margin: 15px 0;
+}
+.doctor_advice{
+    background-color: #2ec561;
+    color: #fff;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+.write_info span{
+    color: #999;
+    display: inline-block;
+    margin: 10px 0px;
+    margin-right: 20px;
+}
+.evaluation span{
+    display: inline-block;
+    width: 110px;
+    color: #aaa;
+}
+.evaluation button{
+    font-weight: bold;
+    border-radius: 5px;
+    color: #fff;
+    width: 80px;
+    height: 30px;
+    margin-right: 20px;
+}
+.good{
+    background-color:red;
+}
+.bed{
+    background-color:steelblue;
+}
+.medicine_advice div{
+    color: #999;
+    margin: 10px;
+    font-size: 15px;
+}
+.number{
+    float: right;
+}
+.name{
+    color: #2ec561;
+}
+table{
+    margin: 10px auto;
+    text-align: center;
+    font-size: 18px;
+    width:900px;
+    border-bottom: dashed 1px #ddd;
+    border-top: none;
+    position: relative;
+    left: -50px;
+}
+caption{
+    font-weight: bold;
+    color: #09ad41;
+    font-size: 22px;
+    margin: 10px 0;
+}
+tbody{
+    position: relative;
+    left: -55px;
+    font-size: 16px;
+}
+th{
+    color: #333;
+}
+td:last-of-type{
+    color: red;
+}
+td:first-of-type{
+    color: #2ec561;
+}
+.time{
+    padding: 10px;
+    color: rgb(66,191,242)!important;
+}
+.sum{
+    font-size: 20px;
+    font-weight: bold;
+}

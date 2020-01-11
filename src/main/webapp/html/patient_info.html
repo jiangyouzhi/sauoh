@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>患者信息</title>
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<link rel="stylesheet" type="text/css" href="../css/ui-component.css">
+    <link rel="stylesheet" type="text/css" href="../css/patient_info.css">
+    <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="../js/ui.js"></script>
+	<script type="text/javascript" src="../js/patient_info.js"></script>
+</head>
+<body onload="getCookie()">
+	<!-- 头部 -->
+	<header class="header">
+		<div id="header" class="header">
+		<div class="wrap">
+			<a href="main.html" class="logo"><img src="../img/logo_.png" alt="logo"/></a>
+            <span class="logo_word">管理员平台</span>
+            <div class="ad_msg">
+			    <div class="word">
+				    <span id="Uname">象信息</span><br/>
+			        <span id="Ushenfen">XXXX</span>
+			    </div>
+			    <img src="../img/head.png" alt="头像" class="head">
+			    <span class="exit" onclick="exit()">退&emsp;出</span>
+		    </div>
+		</div>
+	</div>
+	</header>
+    <div id="nav" class="nav">
+        <div class="wrap">
+			 <a href="patient_info.html" class="link  menu">患者信息</a>
+            <a href="doctor_info.html" class="link  ">医生信息</a>
+			 <a href="medicine_info.html" class="link ">药品信息</a>
+			 <a href="admin_info.html" class="link " id="admin">管理员信息</a>
+         </div>
+    </div>
+
+	<!-- 主体 -->
+	 <div class="main">
+        <div class="admin_nav">
+            <ul>
+                <li class="xuan" onclick="find(this)">查看患者信息</li>
+                <li onclick="add(this)">添加患者信息</li>
+                <li onclick="amend(this)">修改患者信息</li>
+                <li onclick="delet(this)">删除患者信息</li>
+            </ul>
+        </div>
+        <hr  class="fen"/>
+        <div id="info" class="info">
+        </div>
+    </div>	
+	<div id="footer" class="footer">
+		<div class="wrap">
+			Copyright&nbsp;&copy;&nbsp;在线问诊	
+		</div>
+	</div>
+</body>
+</html>

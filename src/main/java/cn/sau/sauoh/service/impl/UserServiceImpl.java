@@ -1,14 +1,12 @@
 package cn.sau.sauoh.service.impl;
 
-import cn.sau.sauoh.entity.Doctor;
-import cn.sau.sauoh.entity.Patient;
-import cn.sau.sauoh.entity.User;
-import cn.sau.sauoh.entity.UserRole;
+import cn.sau.sauoh.entity.*;
 import cn.sau.sauoh.repository.*;
 import cn.sau.sauoh.service.UserService;
 import cn.sau.sauoh.utils.Constant;
 import cn.sau.sauoh.utils.RRException;
 import cn.sau.sauoh.web.vm.UserVM;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -153,5 +151,26 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             }
         }
         return userInfo;
+    }
+
+    @Override
+    public List<User> selectAuth(){
+        int cityId = roleMapper.selectRoleIdByValue("ROLE_CITY_ADMIN");
+//        int proId = roleMapper.selectRoleIdByValue("ROLE_PROVINCE_ADMIN");
+        List<UserRole> userRoles = new ArrayList<>();
+        QueryWrapper<UserRole> userRoleQueryWrapper = new QueryWrapper<>();
+        QueryWrapper<UserRole> userRoleQueryWrapper1 = new QueryWrapper<>();
+        userRoleQueryWrapper.eq("role_id",cityId);
+//        userRoleQueryWrapper1.eq("role_id",proId);
+        userRoles.addAll(userRoleMapper.selectList(userRoleQueryWrapper));
+//        userRoles.addAll(userRoleMapper.selectList(userRoleQueryWrapper1));
+
+        List<User> users = new ArrayList<>();
+        for(UserRole userRole:userRoles){
+            User user = userMapper.selectById(userRole.getUserId());
+            users.add(user);
+        }
+
+        return users;
     }
 }
