@@ -72,7 +72,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter implements Logo
                 //所有的资源必须登陆后才能查看
                 .antMatchers("/api/**").authenticated()
                 //聊天必须登陆后
-                .antMatchers("/msg/").authenticated()
+                .antMatchers("/msg/**", "/msg/*").authenticated()
                 //管理员才有删除资源的资格
                 .antMatchers(HttpMethod.DELETE, "/api/**").hasAnyRole("ROLE_PROVINCE_ADMIN", "ROLE_CITY_ADMIN")
                 //静态资源全部放行

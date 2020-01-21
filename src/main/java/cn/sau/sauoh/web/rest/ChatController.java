@@ -57,7 +57,7 @@ public class ChatController {
     /**
      * 未读消息的senderId
      */
-    @GetMapping("/unread/senderid")
+    @GetMapping("/unread/senderId")
     public R getSenderId() {
         //当前登陆人
         User user = currentUser.getCurrentUser();
